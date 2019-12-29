@@ -13,7 +13,7 @@ class NotesController < ApplicationController
     end
 
     def show
-        note = Note.find_by(params[:id])
+        note = Note.find_by(id: params[:id])
         render json: NoteSerializer.new(note)
     end
 end

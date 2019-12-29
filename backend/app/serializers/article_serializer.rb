@@ -1,4 +1,4 @@
 class ArticleSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :title, :url
 end
