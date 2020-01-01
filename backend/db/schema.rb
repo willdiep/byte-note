@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_30_002749) do
+ActiveRecord::Schema.define(version: 2020_01_01_023757) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "author"
+    t.integer "user_id"
   end
 
   create_table "notes", force: :cascade do |t|
@@ -24,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_12_30_002749) do
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
   end
 
   create_table "user_articles", force: :cascade do |t|
@@ -50,6 +53,8 @@ ActiveRecord::Schema.define(version: 2019_12_30_002749) do
     t.string "lastname"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "article_id"
+    t.integer "note_id"
   end
 
   add_foreign_key "user_articles", "articles"
