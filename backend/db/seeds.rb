@@ -8,11 +8,11 @@
 user1 = User.create(username: 'User1', firstname: 'Allen', lastname: 'Shin')
 user2 = User.create(username: 'User2', firstname: 'Will', lastname: 'Diep')
 
-article1 = Article.create(title: 'How to write a HOC in 3 easy steps', url: 'https://paulgray.net/how-to-write-a-hoc/?utm_campaign=React%2BNewsletter&utm_medium=email&utm_source=React_Newsletter_100')
-article2 = Article.create(title: 'Optimize Backbone Filtering', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0167642319301674')
-article3 = Article.create(title: 'End-to-end information flow security for web services orchestration', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0167642318301618')
-article4 = Article.create(title: 'Automatic syntax error reporting and recovery in parsing expression grammars', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0167642319301662')
-article5 = Article.create(title: 'Formalizing SPARCv8 instruction set architecture in Coq', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0167642318301163')
+article1 = Article.create(title: 'How to write a HOC in 3 easy steps', url: 'https://paulgray.net/how-to-write-a-hoc/?utm_campaign=React%2BNewsletter&utm_medium=email&utm_source=React_Newsletter_100', author: 'Author1')
+article2 = Article.create(title: 'Optimize Backbone Filtering', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0167642319301674', author: 'Author2')
+article3 = Article.create(title: 'End-to-end information flow security for web services orchestration', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0167642318301618', author: 'Author3')
+article4 = Article.create(title: 'Automatic syntax error reporting and recovery in parsing expression grammars', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0167642319301662', author: 'Author4')
+article5 = Article.create(title: 'Formalizing SPARCv8 instruction set architecture in Coq', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0167642318301163', author: 'Author5')
 
 note1 = Note.create(content: "Sample Content 1" , topic: "Sample Topic 1")
 note2 = Note.create(content: "Sample Content 2" , topic: "Sample Topic 2")
