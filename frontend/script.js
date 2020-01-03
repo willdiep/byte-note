@@ -247,7 +247,7 @@ function renderUserArticles(article){
         <p>${article.id}</p>
         <p id=${article.id}-title>${article.title}</p>
         <a id=${article.id}-link href=${article.url}>${article.url}</a>
-        <p id=${article.id}-author>By: ${article.author}</p>
+        <p id=${article.id}-author> ${article.author}</p>
         <button class='article-button'>Go to Article</button>
     </div>
     `
