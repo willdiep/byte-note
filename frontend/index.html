@@ -1,31 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ByteNote</title>
 
-    <form id='search-article-box'>
-        Search: <input type="text" id="search-term">
-        <input type="submit" value="Submit">
-    </form>
-    <button onclick="window.location.href='/Users/flatironschool/Desktop/byte-note/frontend/note.html'">New Note</button>
-    <br>
-    <br>
-    <button id='userArticles'>User Page Articles</button>
-    <button id='userNotes'>User Page Notes</button>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Karla:400,700&display=swap"
+      rel="stylesheet"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="/frontend/images/logo.png" />
+      </div>
+    </nav>
 
-    <div id='display-results'></div>
+    <main>
+      <form id="search-article-box">
+        <h2>Search For Articles</h2>
+        <input type="text" id="search-term" />
+        <input type="submit" value="Submit" />
+      </form>
+      <button onclick="window.location.href='/frontend/note.html'">
+        New Note
+      </button>
+      <br />
+      <br />
+      <button id="userArticles">User Page Articles</button>
+      <button id="userNotes">User Page Notes</button>
+
+      <div id="display-results"></div>
+    </main>
+
     <!-- <script async src="https://cse.google.com/cse.js?cx=000888210889775888983:pqb3ch1ewhg"></script> -->
     <!-- <div class="gcse-searchbox-only" data-resultsUrl="https://googlecustomsearch.appspot.com/elementv2/two-page_results_elements_v2.html?query=test"></div>  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-   
-    <script src='script.js'></script>
-</body>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+
+    <script src="script.js"></script>
+  </body>
 </html>

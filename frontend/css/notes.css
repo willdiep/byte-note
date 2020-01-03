@@ -1,6 +1,10 @@
 main {
   width: 100%;
 }
+
+
+
+
 div{
   /* background: skyblue; */
   padding:10px;
@@ -24,9 +28,9 @@ pre{
   box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 3px 6px, rgba(15, 15, 15, 0.2) 0px 9px 24px;
 } */
 body {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* width: 600px; */
-  font-family: 'Dosis';
+  /* font-family: var(--karla-font); */
 }
 a {
   cursor: pointer;
@@ -195,7 +199,7 @@ iframe {
 }
 
 .flex-split-right {
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -211,7 +215,7 @@ iframe {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
-  height: auto;
+  height: auto; */
 }
 
 .flex-split {
@@ -261,12 +265,12 @@ iframe {
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
-	-webkit-box-align: center;
+	/* -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center;
+          justify-content: center; */
 }

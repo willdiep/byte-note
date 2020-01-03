@@ -14,21 +14,29 @@ function textCollectionArray() {
   return result;
 }
 
+function moveWidget() {
+  return `
+  
+  `
+}
+
+
 document.addEventListener("DOMContentLoaded", function(event) {
   console.log("initial textbox loaded");
   let div = document.createElement("div");
-
   div.className = "column";
+  div.placeholder = "Type something here";
   div.setAttribute("data-block-id", username + "-" + topic + "-" + blockId);
   div.setAttribute("draggable", "true");
   div.style.backgroundColor = "skyblue";
   div.style.color = "white";
   div.style.fontSize =
     "1em"; /* div.style.top = "50px" */ /* div.style.position = "absolute" */
-  /* div.style.left = "50px" */ div.style.height = "1em";
-  div.style.width = "500px";
+  /* div.style.left = "50px" */ div.style.lineHeight = "1em";
+  div.style.width = "100%";
   div.contentEditable = "true";
   div.spellcheck = "true";
+  div.style.postion = "relative";
 
   addDnDHandlers(div);
 
@@ -41,14 +49,15 @@ document.addEventListener("keydown", event => {
     // e.stopPropagation();
     let div = document.createElement("div");
     div.className = "column";
+    div.placeholder = "Type something here";
     div.setAttribute("data-block-id", username + "-" + topic + "-" + ++blockId);
     div.setAttribute("draggable", "true");
     div.style.backgroundColor = "skyblue";
     div.style.color = "white";
     div.style.fontSize =
       "1em"; /* div.style.left = "50px" */ /* div.style.top = "50px" */
-    /* div.style.position = "absolute" */ div.style.height = "1em";
-    div.style.width = "500px";
+    /* div.style.position = "absolute" */ div.style.lineHeight = "1em";
+    div.style.width = "100%";
     div.contentEditable = "true";
 
     addDnDHandlers(div);
