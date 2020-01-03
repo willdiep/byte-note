@@ -9,5 +9,13 @@ class NotesController < ApplicationController
         render json: NoteSerializer.new(note)
     end
 
+    def create
+        note = Note.create(topic: params[:topic], content: params[:content])
+        render json: NoteSerializer.new(note)
+        if note.valid?
+            user_note = UserNote.create(user_id: 1, note_id: note.id)
+        end
+    end
+
 end
  
