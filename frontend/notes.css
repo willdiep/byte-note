@@ -1,0 +1,272 @@
+main {
+  width: 100%;
+}
+div{
+  /* background: skyblue; */
+  padding:10px;
+  width: 100%;
+  /* text-align: right; */
+}
+pre{
+  white-space: pre-wrap;
+  background: #EEE;
+}
+/* .toolbar {
+  display: inline-flex;
+  width: 200px;
+  align-items: stretch;
+  height: 30px;
+  background: white;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.2;
+  border-radius: 3px;
+  box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 3px 6px, rgba(15, 15, 15, 0.2) 0px 9px 24px;
+} */
+body {
+  margin: 0 auto;
+  /* width: 600px; */
+  font-family: 'Dosis';
+}
+a {
+  cursor: pointer;
+}
+#editor {
+  box-shadow: 0 0 2px #CCC;
+  min-height: 150px;
+  overflow: auto;
+  padding: 1em;
+  margin-top: 20px;
+  resize: vertical;
+  outline: none;
+}
+.toolbar {
+  /* display: none; */
+  visibility: hidden;
+  text-align: center;
+}
+.toolbar a,
+.fore-wrapper,
+.back-wrapper {
+  border: 1px solid #AAA;
+  background: #FFF;
+  font-family: 'Candal';
+  border-radius: 1px;
+  color: black;
+  padding: 5px;
+  width: 1.5em;
+  margin: -2px;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  box-shadow: 0px 1px 0px #CCC;
+}
+.toolbar a:hover,
+.fore-wrapper:hover,
+.back-wrapper:hover {
+  background: #f2f2f2;
+  border-color: #8c8c8c;
+}
+a[data-command='redo'],
+a[data-command='strikeThrough'],
+a[data-command='justifyFull'],
+a[data-command='insertOrderedList'],
+a[data-command='outdent'],
+a[data-command='p'],
+a[data-command='superscript'] {
+  margin-right: 5px;
+  border-radius: 0 3px 3px 0;
+}
+a[data-command='undo'],
+.fore-wrapper,
+a[data-command='justifyLeft'],
+a[data-command='insertUnorderedList'],
+a[data-command='indent'],
+a[data-command='h1'],
+a[data-command='subscript'] {
+  border-radius: 3px 0 0 3px;
+}
+a.palette-item {
+  height: 1em;
+  border-radius: 3px;
+  margin: 2px;
+  width: 1em;
+  border: 1px solid #CCC;
+}
+a.palette-item:hover {
+  border: 1px solid #CCC;
+  box-shadow: 0 0 3px #333;
+}
+.fore-palette,
+.back-palette {
+  display: none;
+}
+.fore-wrapper,
+.back-wrapper {
+  display: inline-block;
+  cursor: pointer;
+}
+.fore-wrapper:hover .fore-palette,
+.back-wrapper:hover .back-palette {
+  display: block;
+  float: left;
+  position: absolute;
+  padding: 3px;
+  width: 160px;
+  background: #FFF;
+  border: 1px solid #DDD;
+  box-shadow: 0 0 5px #CCC;
+  height: 70px;
+}
+.fore-palette a,
+.back-palette a {
+  background: #FFF;
+  margin-bottom: 2px;
+}
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+#editable-columns {
+  list-style-type: none;
+}
+.column {
+  width: 162px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  cursor: move;
+}
+/* .column header {
+  height: 20px;
+  width: 150px;
+  color: black;
+  background-color: #ccc;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px;
+  border: 2px solid #666666;
+} */
+.column.dragElem {
+  opacity: 0.4;
+}
+.column.over {
+  /* border: 2px dashed #000; */
+  border-top: 2px solid red;
+}
+iframe {
+  border: 0; 
+  width: 100%; 
+  height: 100%
+}
+/* stacked column below 48em */
+.flex-split-left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  /* display: flex; */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* background-color: purple; */
+  color: white;
+  height: auto;
+  /*box-shadow: inset 0 0 1px white;*/
+  padding-bottom: 2em;
+}
+.flex-split-image {
+  align-self: center;
+  height: 90px;
+  width: auto;
+  margin-bottom: 2em;
+  margin-top: 2em
+}
+.flex-split-left a {
+  text-decoration: overline;
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+}
+
+.flex-split-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: hsl(0, 0%, 14%);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+  height: auto;
+}
+
+.flex-split {
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	/* display:flex; */
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+/***************************/
+/* SPLIT SCREEN ABOVE 60EM */
+/***************************/
+@media all and (min-width:60em) {
+  .flex-split > div {
+    min-width: 50%;
+    width:50%;
+	}
+  .flex-split {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+    overflow: hidden;
+    height: 100vh;
+/*This here in flex-parent for making only certain items scrollable */
+    position: relative;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    will-change: overflow;
+	}
+  /*circular buttons in the middle at big enough screens*/
+}
+.flex-split > div {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	/* display: flex; */
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}

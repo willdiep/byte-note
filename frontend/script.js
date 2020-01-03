@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
     searchButtonListener()
     userArticlesListener()
     userNotesListener()
+    // newNoteListener()
 })
 
 function searchButtonListener(){
@@ -14,6 +15,11 @@ function searchButtonListener(){
         searchArticles(searchTerm)
     })
 }
+
+// function newNoteListener(){
+//     let newNoteButton = document.getElementById('newnote')
+//     newNoteButton.setAttribute('onclick', "window.location.href='/frontend/note.html")
+// }
 
 function searchArticles(searchTerm){
     console.log(searchTerm)
@@ -164,6 +170,11 @@ function getUser(things){
                     })
                 }
         }else if (things == 'notes'){
+            let newNoteButton = document.createElement('button')
+            newNoteButton.setAttribute('id', 'new-note')
+            newNoteButton.addEventListener('click', function(e){
+                console.log(e.target)
+            })
             displayResults.innerHTML = notes.map((note) => renderUserNotes(note)).join('')
             let noteButtons = document.getElementsByClassName('note-button')
             for(let i = 0; i< noteButtons.length; i++){

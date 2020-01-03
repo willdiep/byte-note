@@ -2,48 +2,65 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Create New Div When Clicked</title>
+    <title>Split screen</title>
     <link
-      rel="stylesheet"
-      href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Dosis|Candal"
-    />
-    <link rel="stylesheet" href="notes.css" />
+    rel="stylesheet"
+    href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css"
+  />
+    <link rel="stylesheet" href="./notes.css" />
   </head>
   <body>
-    <div class="toolbar">
-      <a href="#" data-command="bold"><i class="fa fa-bold"></i></a>
-      <a href="#" data-command="italic"><i class="fa fa-italic"></i></a>
-      <a href="#" data-command="underline"><i class="fa fa-underline"></i></a>
-      <a href="#" data-command="strikeThrough"
-        ><i class="fa fa-strikethrough"></i
-      ></a>
-      <a href="#" data-command="h1">H1</a>
-      <a href="#" data-command="h2">H2</a>
-    </div>
 ​
-    <!-- <div id="columns">
-      <div class="column" draggable="true">A</div>
-      <div class="column" draggable="true">B</div>
-      <div class="column" draggable="true">C</div>
-      <div class="column" draggable="true">D</div>
-      <div class="column" draggable="true">E</div>
-    </div> -->
+    <div class="flex-split">
+      <!-- Child divs -->
+      <div class="flex-split-left">
+        <!-- <div class="flex-split-image"> -->
+            <iframe src="/Users/flatironschool/Desktop/byte-note/frontend/index.html"></iframe>
+            <!-- <form id='search-article-box'>
+                Search: <input type="text" id="search-term">
+                <input type="submit" value="Submit">
+            </form>
+            <br>
+            <br>
+            <button id='userArticles'>User Page Articles</button>
+            <button id='userNotes'>User Page Notes</button>
+        
+        
+            <div id='display-results'></div> 
+            <script src="./script.js"></script>        -->
+
+        <!-- </div> -->
+        <script src="./script.js"></script>
+      </div>
 ​
-    <div id="editable-columns">
+      <div class="flex-split-right">
+        <div class="right-header">
+          <h1>Note Editor</h1>
+​
+          <div class="toolbar">
+            <a href="#" data-command="bold"><i class="fa fa-bold"></i></a>
+            <a href="#" data-command="italic"><i class="fa fa-italic"></i></a>
+            <a href="#" data-command="underline"><i class="fa fa-underline"></i></a>
+            <a href="#" data-command="strikeThrough"
+              ><i class="fa fa-strikethrough"></i
+            ></a>
+            <a href="#" data-command="h1">H1</a>
+            <a href="#" data-command="h2">H2</a>
+          </div>
       
+          <div id="editable-columns">
+      
+          </div>
+
+          <button onclick="window.location.href='/Users/flatironschool/Desktop/byte-note/frontend/index.html'">Close the Note Editor</button>
+
+        </div>
     </div>
-​
-    <pre></pre>
-​
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-​
-    <script src="./notes.js"></script>
-    
+</div>
 ​
 ​
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="./notes.js"></script>
+​   
   </body>
 </html>
