@@ -14,6 +14,7 @@ function textCollectionArray() {
   return result;
 }
 
+
 document.addEventListener("DOMContentLoaded", function(event) {
   console.log("initial textbox loaded");
   let div = document.createElement("div");
@@ -31,9 +32,48 @@ document.addEventListener("DOMContentLoaded", function(event) {
   div.spellcheck = "true";
 
   addDnDHandlers(div);
-
+  saveNoteListener()
+  hideNoteButton();
   editableColumns.append(div);
 });
+
+function saveNoteListener(){
+  let saveNoteButton = document.getElementById('save-note')
+  saveNoteButton.addEventListener('click', function(){
+      postNote(textCollectionArray())
+  })
+}
+
+// function toNoteListener(){
+//   let toNoteButton = document.getElementById('to-note')
+//   toNoteButton.addEventListener('click', function(){
+//     console.log('hello')
+//   })
+// }
+
+
+function hideNoteButton(){
+  console.log(window.frames['article-frame'])
+  // .document.getElementById('gotoButton').remove()
+}
+function postNote(array){
+  console.log(array)
+  let noteContent = array
+  // debugger;
+  // let noteContent = ''
+  
+  let noteTopic = document.getElementById('topic-term').value
+  let data = {
+    topic: noteTopic,
+    content: noteContent
+  }
+  fetch('http://localhost:3000/notes', {
+    method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+  }).then(response => response.json())
+  .then(json => alert("You saved this note!"))
+}
 
 document.addEventListener("keydown", event => {
   if (event.which === 13 || event.keyCode === 13) {

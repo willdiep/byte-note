@@ -15,7 +15,7 @@
       <!-- Child divs -->
       <div class="flex-split-left">
         <!-- <div class="flex-split-image"> -->
-            <iframe src="/Users/flatironschool/Desktop/byte-note/frontend/index.html"></iframe>
+            <iframe id='article-frame' src="/Users/flatironschool/Desktop/byte-note/frontend/index.html"></iframe>
             <!-- <form id='search-article-box'>
                 Search: <input type="text" id="search-term">
                 <input type="submit" value="Submit">
@@ -37,6 +37,10 @@
         <div class="right-header">
           <h1>Note Editor</h1>
 ​
+        <form>
+            Topic: <input type="text" id="topic-term">
+        </form>
+
           <div class="toolbar">
             <a href="#" data-command="bold"><i class="fa fa-bold"></i></a>
             <a href="#" data-command="italic"><i class="fa fa-italic"></i></a>
@@ -51,7 +55,9 @@
           <div id="editable-columns">
       
           </div>
-
+          <br>
+          <button id='save-note'>Save Your Work</button>
+          <br>
           <button onclick="window.location.href='/Users/flatironschool/Desktop/byte-note/frontend/index.html'">Close the Note Editor</button>
 
         </div>

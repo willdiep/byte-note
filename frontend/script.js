@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
     searchButtonListener()
     userArticlesListener()
     userNotesListener()
+    // toNoteListener()
     // newNoteListener()
 })
 
@@ -131,7 +132,7 @@ function saveUserArticle(articleId){
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
     }).then(response => response.json())
-    .then(json => console.log(json))
+    .then(json => alert("You saved this article!"))
 }
 
 function userArticlesListener(){
@@ -170,11 +171,6 @@ function getUser(things){
                     })
                 }
         }else if (things == 'notes'){
-            let newNoteButton = document.createElement('button')
-            newNoteButton.setAttribute('id', 'new-note')
-            newNoteButton.addEventListener('click', function(e){
-                console.log(e.target)
-            })
             displayResults.innerHTML = notes.map((note) => renderUserNotes(note)).join('')
             let noteButtons = document.getElementsByClassName('note-button')
             for(let i = 0; i< noteButtons.length; i++){
@@ -263,7 +259,11 @@ function renderUserNotes(note){
     <div id=${note.id}>
         <p>${note.id}</p>
         <p id=${note.id}-title>${note.topic}</p>
-        <a id=${note.id}-link>${note.content}</a>
+        <ul>
+        ${(note.content).split(',').map((note)=>{
+            return `<li>${note}</li>`
+        }).join(',')}
+        </ul>
         <button class='note-button'>Go to Note</button>
     </div>
     `
