@@ -42,11 +42,12 @@ function searchArticles(searchTerm){
 
 function renderSearchResult(result){
     return `
-    <br><br>
-    <div id=${result.id}>
-        <p>${result.id}</p>
+    <div class="search-result" id=${result.id}>
+        <sub>Article ID: ${result.id}</sub>
+        <br/><br/>
         <p id=${result.id}-title>${result.title}</p>
         <a id=${result.id}-link href=${result.url}>${result.url}</a>
+        <br/><br/>
         <p id=${result.id}-author>By: ${result.user.name}</p>
         <button class='preview-button'>Preview Article</button>
     </div>
